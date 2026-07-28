@@ -1,0 +1,6 @@
+{
+  "name": "Brajesh Medical Hall",
+  "description": "Trusted Medical Store in Paliganj, Bihar for genuine medicines, healthcare products, baby care, surgical items & instant WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
