@@ -153,14 +153,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="flex flex-wrap items-center gap-4 text-[11px] uppercase tracking-wider font-medium text-slate-400">
             <span>© {new Date().getFullYear()} {BUSINESS_INFO.name}</span>
             <span>•</span>
-            <a
-              href="https://main.webmakerit.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="accent-text hover:underline font-semibold transition-colors"
-            >
-              Developed by WMIT
-            </a>
+            <a href="#" className="wmit-popup-trigger hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">Developed by WMIT</a>
             <span>•</span>
             <button
               onClick={() => setLegalModalTitle('Privacy Policy')}
