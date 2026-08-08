@@ -26,7 +26,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, selectedCategory 
 
   const title = pageTitles[currentPage] || pageTitles.home;
   const description = pageDescriptions[currentPage] || pageDescriptions.home;
-  const canonicalUrl = `https://brajeshmedicalhall.com/${currentPage === 'home' ? '' : currentPage}`;
+  const baseUrl = 'https://brajesh-medical-hall.vercel.app';
+  const canonicalUrl = `${baseUrl}/${currentPage === 'home' ? '' : currentPage}`;
 
   useEffect(() => {
     document.title = title;
@@ -57,9 +58,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, selectedCategory 
   const pharmacySchema = {
     '@context': 'https://schema.org',
     '@type': 'Pharmacy',
-    '@id': 'https://brajeshmedicalhall.com/#pharmacy',
+    '@id': `${baseUrl}/#pharmacy`,
     name: BUSINESS_INFO.name,
-    image: 'https://brajeshmedicalhall.com/brajesh_store_front.jpg',
+    image: `${baseUrl}/brajesh_store_front.jpg`,
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,
     url: canonicalUrl,
@@ -126,7 +127,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, selectedCategory 
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://brajeshmedicalhall.com/',
+        item: `${baseUrl}/`,
       },
       ...(currentPage !== 'home'
         ? [
